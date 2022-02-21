@@ -92,7 +92,9 @@ void reconnect()
 {
   while (!client.connected()) 
   {
-    Serial.print("connecting to mqtt.tingg.io...");
+    Serial.print("connecting to ");
+    Serial.print(mqttServer);
+    Serial.print("...");
  
     if (client.connect(mqttDeviceId, mqttUsername, mqttPassword)) 
     {
